@@ -9,8 +9,9 @@ return new class extends Migration
     {
         Schema::create('lenguajes_de_programacion', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 100)->unique();
-            $table->string('version', 50);
+            $table->string('nombre', 60)->unique();
+            $table->string('version', 60);
+            $table->boolean('activo')->default(true);
             $table->timestamps();
         });
     }

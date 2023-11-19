@@ -9,17 +9,16 @@ return new class extends Migration
     {
         Schema::create('frameworks', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 100)->unique();
-            $table->string('version', 50);
+            $table->string('nombre', 60)->unique();
+            $table->string('version', 60);
+            $table->string('pagina_web_url', 250)->nullable();
+            $table->string('logo_url', 250)->nullable();
             $table->unsignedBigInteger('lenguaje_programacion_id');
             $table->foreign('lenguaje_programacion_id')->references('id')->on('lenguajes_de_programacion');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('frameworks');

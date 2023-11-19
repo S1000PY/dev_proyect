@@ -13,6 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('proyecto_id');
             $table->foreign('framework_id')->references('id')->on('frameworks');
             $table->foreign('proyecto_id')->references('id')->on('proyectos');
+            $table->text('descripcion')->nullable();
             $table->timestamps();
         });
     }

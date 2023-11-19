@@ -9,10 +9,14 @@ return new class extends Migration
     {
         Schema::create('proyectos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 100);
-            $table->string('descripcion');
+            $table->string('nombre', 80);
+            $table->date('fecha_desde');
+            $table->date('fecha_hasta');
+            $table->boolean('activo')->default(true);
+            $table->text('descripcion');
+            $table->string('encargado', 40)->nullable();
             $table->timestamps();
-        });        
+        });
     }
 
     public function down(): void

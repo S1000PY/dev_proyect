@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class LenguajeDeProgramacion extends Model
 {
     protected $table = 'lenguajes_de_programacion';
-    protected $fillable = ['nombre', 'activo'];
+    protected $fillable = ['nombre', 'version', 'activo'];
 
     public function frameworks()
     {
