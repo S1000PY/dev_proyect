@@ -58,7 +58,7 @@ class FrameworksSeeder extends Seeder
                 'nombre' => 'Spring Boot', 
                 'version' => '2.4.x',
                 'pagina_web_url' => 'https://spring.io/projects/spring-boot',
-                'logo_url' => 'https://spring.io/img/homepage/icon-spring-boot.svg',
+                'logo_url' => 'https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg',
                 'lenguaje_programacion_id' => 3
             ]
         ]);

@@ -1,18 +1,10 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LenguajesDeProgramacionController;
+use App\Http\Controllers\FrameworksController;
+use App\Http\Controllers\ProyectosController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+Route::get('/lenguajes-de-programacion', [LenguajesDeProgramacionController::class, 'index']);
+Route::get('/frameworks', [FrameworksController::class, 'index']);
+Route::get('/proyectos/{id}', [ProyectosController::class, 'show']);
