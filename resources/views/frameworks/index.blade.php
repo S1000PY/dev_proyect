@@ -21,25 +21,25 @@
 
         <tbody>
             @foreach ($frameworks as $framework)
-            <tr>
-                <td>{{ $framework->nombre }}</td>
-                <td>{{ $framework->lenguajeProgramacion->nombre }}</td>
-                <td>
-                    <a href="{{ $framework->pagina_web_url }}" target="_blank">
-                        <img src="{{ $framework->logo_url }}" alt="{{ $framework->nombre }}" style="width: 50px; height: auto;">
-                    </a>
-                </td>
-                <td>{{ $framework->proyectos->count() }}</td>
-                <td>
-                    @foreach ($framework->proyectos as $proyecto)
-                        <a href="{{ url('/proyectos/'.$proyecto->id) }}">{{ $proyecto->nombre }}</a><br>
-                    @endforeach
-                </td>
-            </tr>
+                <tr>
+                    <td>{{ $framework->nombre }}</td>
+                    <td>{{ $framework->lenguajeProgramacion->nombre }}</td>
+                    <td>
+                        <a href="{{ $framework->pagina_web_url }}" target="_blank">
+                            <img src="{{ $framework->logo_url }}" alt="{{ $framework->nombre }}" style="width: 50px; height: auto;">
+                        </a>
+                    </td>
+                    <td>{{ $framework->proyectos->count() }}</td>
+                    <td>
+                        @foreach ($framework->proyectos as $proyecto)
+                            <a href="{{ url('/proyectos/'.$proyecto->id) }}">{{ $proyecto->nombre }}</a><br>
+                        @endforeach
+                    </td>
+                </tr>
             @endforeach
         </tbody>
     </table>
 
-    <a href="{{ url('/') }}" class="btn btn-primary">Volver</a>
+    <a href="{{ url('/') }}" class="btn btn-primary">Volver al inicio</a>
 </div>
 @endsection

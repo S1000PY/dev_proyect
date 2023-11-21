@@ -2,9 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2>Proyecto: {{ $proyecto->nombre }}</h2>
-
-        <div class="card" style="margin: 20px 0px">
+        <div class="card border-primary mb-3" style="border-width: 2px; margin: 20px 0px">
             <div class="card-body">
                 <h3 class="card-title">{{ $proyecto->nombre }}</h3>
                 <p class="card-text">{{ $proyecto->descripcion }}</p>
@@ -34,6 +32,6 @@
             </div>
         </div>
 
-        <a href="{{ url('/proyectos') }}" class="btn btn-primary mt-3">Volver a la lista</a>
+        <a href="{{ url('/frameworks') }}" class="btn btn-primary mt-3">Volver a la lista</a>
     </div>
 @endsection

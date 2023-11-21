@@ -39,6 +39,6 @@
             </tbody>
         </table>
 
-        <a href="{{ url('/') }}" class="btn btn-primary">Volver</a>
+        <a href="{{ url('/') }}" class="btn btn-primary">Volver al inicio</a>
     </div>
 @endsection

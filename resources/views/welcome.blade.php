@@ -26,10 +26,6 @@
                         <div class="mt-4">
                             <a href="{{ url('/frameworks') }}" class="btn btn-primary"> Ver frameworks</a>
                         </div>
-
-                        <div class="mt-4">
-                            <a href="{{ url('/proyectos') }}" class="btn btn-primary">Ver proyectos</a>
-                        </div>
                     </nav>
                 </div>
             </div>
